@@ -75,16 +75,18 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MaterialTheme(
-                colorScheme = darkColorScheme(
-                    primary = GreenColor,
-                    onPrimary = Color.Black,
-                    background = BgColor,
-                    surface = CardColor,
-                    onBackground = TextColor,
-                    onSurface = TextColor
-                )
-            ) {
+          val premiumColors = darkColorScheme(
+              primary = Color(0xFF00E676),
+              onPrimary = Color.Black,
+              secondary = Color(0xFF9D4EDD),
+              background = Color(0xFF070A11),
+              surface = Color(0xFF121824),
+              onBackground = Color(0xFFF8F9FA),
+              onSurface = Color(0xFFF8F9FA),
+              error = Color(0xFFFF3B30),
+              )
+
+          MaterialTheme(colorScheme = premiumColors){
                 ZelApp()
             }
         }
